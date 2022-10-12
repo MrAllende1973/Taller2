@@ -9,12 +9,25 @@ document.addEventListener("click", (e) => {
     const msg = document.getElementById("msg");
 
     //Claves:
-    let a = prompt("Ingrese la clave 1: ")
-    let b = prompt("Ingrese la clave 2: ")
-    clave1 = clave(a);
-    clave2 = clave(b);
+    let a = 0;
+    let clave1 = 0;
 
-    console.log(e.target);
+    a = prompt("Primera Clave para el Abecedario: ");
+    while(a<1 || a>26){
+        console.log("Sobrepaso el rango!!\n")
+        a = prompt("Primera Clave para el Abecedario: ");
+    }
+    clave1 = clave(a);
+
+    let b = 0;
+    let clave2 = 0;
+
+    b = prompt("Segunda Clave para el Abecedario: ");
+    while(b<1 || b>26){
+        console.log("Sobrepaso el rango!!\n")
+        b = prompt("Segunda Clave para el Abecedario: ");
+    }
+    clave2 = clave(b);
 
     console.log("=============================================");
 
@@ -94,3 +107,4 @@ const secuencia = function(msg){ //Secuencia
     }
     return secuencia2;
 }
+

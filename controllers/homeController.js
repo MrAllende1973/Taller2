@@ -56,7 +56,6 @@ const editarMensaje = async(req, res) => {
     }
 };
 
-
 module.exports = {
     leerMensaje,
     agregarMensaje,
@@ -64,3 +63,4 @@ module.exports = {
     editarMensajeForm,
     editarMensaje
 }
+
