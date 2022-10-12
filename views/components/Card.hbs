@@ -1,9 +1,11 @@
 <article class="card mb-2">
     <div class="card-body">
-        <p>Mensaje a Encriptar: {{this.origin}}</p>
-        <p>Mensaje Cifrado: </p>
+        <p>--------------------</p>
+        <label id="label">Mensaje a Cifrar: </label>
+        <p id="msg">{{this.origin}}</p>
+        <p>--------------------</p>
         <a href="/eliminar/{{this._id}}" class="btn btn-danger">Eliminar Mensaje</a>
         <a href="/editar/{{this._id}}" class="btn btn-warning">Editar Mensaje</a>
-        <button data-short="{{this._id}}" href="#" class="btn btn-info">Encriptar</button>
+        <button id="btn1" data-short="{{this._id}}" href="#" class="btn btn-info">Encriptar</button>
     </div>
 </article>

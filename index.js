@@ -25,6 +25,7 @@ require('./database/db')
 //Middlewares para archivos estaticos y para poder leer el Req.Body
 app.use(express.static(__dirname + "/public"));
 app.use(express.urlencoded({extended: true}));
+app.use(express.json());
 /* ----------------------------------------------------------- */
 
 /* ----------------------------------------------------------- */
