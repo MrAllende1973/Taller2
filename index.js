@@ -22,16 +22,16 @@ require('./database/db')
 /* ----------------------------------------------------------- */
 
 /* ----------------------------------------------------------- */
+//Middlewares para archivos estaticos y para poder leer el Req.Body
+app.use(express.static(__dirname + "/public"));
+app.use(express.urlencoded({extended: true}));
+/* ----------------------------------------------------------- */
+
+/* ----------------------------------------------------------- */
 //Middlewares para Implementacion el Motor de Plantilla
 app.engine(".hbs", hbs.engine);
 app.set("view engine", ".hbs");
 app.set("views", "./views");
-/* ----------------------------------------------------------- */
-
-/* ----------------------------------------------------------- */
-//Middlewares para archivos estaticos y para poder leer el Req.Body
-app.use(express.static(__dirname + "/public"));
-app.use(express.urlencoded({extended: true}));
 /* ----------------------------------------------------------- */
 
 /* ----------------------------------------------------------- */
