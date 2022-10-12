@@ -1,0 +1,14 @@
+{{#if mensaje}}
+    <form action="/editar/{{mensaje._id}}" method="post">
+        <input value="{{mensaje.origin}}" type="text" placeholder="Edite el Mensaje" name="origin" class="form-control my-2">
+        <button type="submit" class="btn btn-warning w-100 mb-2">Editar Mensaje</button>
+    </form>
+       
+    {{else}}
+    
+    <form action="/" method="post">
+        <input type="text" placeholder="Edite el Mensaje" name="origin" class="form-control my-2">
+        <button type="submit" class="btn btn-primary w-100 mb-2">Edite el Mensaje</button>
+</form>
+
+{{/if}}
